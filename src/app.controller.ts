@@ -1,12 +1,18 @@
-import { Controller, Get } from '@nestjs/common';
+import { Body, Controller, Param, Post, Put } from '@nestjs/common';
 import { AppService } from './app.service';
+import { Inventory } from './schemas/inventory.schema';
 
-@Controller()
+@Controller('inventory')
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(private readonly appService: AppService) { }
 
-  @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  @Post()
+  create(@Body() inventory: Inventory): Promise<Inventory> {
+    return this.appService.create(inventory);
+  }
+
+  @Put(':id')
+  update(@Param('id') id: string, @Body() body: Inventory): Promise<Inventory> {
+    return this.appService.update(id, body)
   }
 }
