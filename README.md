@@ -63,7 +63,7 @@ Create an inventory record by making a `PUT` request to the endpoint below.
 
 
 ```
-POST /inventory/:id
+PUT /inventory/:id
 
 {
   "level": 10
