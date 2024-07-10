@@ -24,8 +24,15 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Inventory Service
 
+## Docker setup
+
+```bash
+$ docker-compose up -d
+```
+
+This will spin up a Docker application and a mongodb database
 ## Installation
 
 ```bash
