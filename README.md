@@ -65,6 +65,41 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+## Running the app
+
+### add an inventory item
+
+Create an inventory record by making a `POST` request to the endpoint below.
+
+```
+POST /inventory
+
+{
+  "level": 10
+}
+```
+
+### update an inventory item
+
+Create an inventory record by making a `PUT` request to the endpoint below.
+
+
+```
+POST /inventory/:id
+
+{
+  "level": 10
+}
+```
+
+## Webhook
+
+Creating and/or updating an inventory record will send a webhook request to the endpoint below.
+
+```
+https://webhook.site/#!/view/a5d631c4-fe61-4ba6-8502-6a3327c294f1/9b07e42c-dee7-4566-a92c-e8f849d23769/1
+```
+
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
