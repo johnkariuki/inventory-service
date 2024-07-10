@@ -91,6 +91,13 @@ POST /inventory/:id
   "level": 10
 }
 ```
+## Swagger Docs
+
+Access the swagger docs for the endpoints on the endpoint below.
+
+```
+/docs
+```
 
 ## Webhook
 
